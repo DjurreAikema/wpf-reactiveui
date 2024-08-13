@@ -37,6 +37,7 @@ public class AppViewModel : ReactiveObject
         _searchResults.ThrownExceptions.Subscribe(error =>
         {
             // Handle errors here
+            // For example, log them
         });
 
         _isAvailable = this
