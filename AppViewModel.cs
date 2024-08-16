@@ -26,7 +26,7 @@ public class AppViewModel : ReactiveObject
     {
         _searchResults = this
             .WhenAnyValue(x => x.SearchTerm)
-            .Throttle(TimeSpan.FromMilliseconds(800))
+            .Throttle(TimeSpan.FromMilliseconds(700))
             .Select(term => term?.Trim())
             .DistinctUntilChanged()
             .Where(term => !string.IsNullOrWhiteSpace(term))
